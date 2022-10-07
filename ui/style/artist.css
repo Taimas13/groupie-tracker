@@ -1,0 +1,216 @@
+html {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(241, 241, 241);
+    max-width: 1655px;
+    font-family: 'Roboto Mono', monospace;
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+  }
+a{
+  color: black;
+  text-decoration: none;  
+}
+a:visited 
+{
+  color: black;
+  text-decoration: none;
+}
+.gifka{
+  width: 28%;
+}
+.upside{
+  text-align: center;
+  background-color: rgb(164, 222, 255);
+}
+.upsideText{
+background-color: rgb(102, 198, 253);
+font-size: 300%;
+}
+.artist{
+  width: 100%;
+}
+
+.band {
+    margin-top: 20px;
+    display: flex;
+    /* padding: 10px; */
+    justify-content:space-evenly;
+}
+  .bandinfo {
+    width: 250px;
+    margin: 0.5px 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.dateslocations {
+    width: 250px;
+    margin: 0.5px 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.infoborder {
+    margin: 20px 0;
+    border-left: 3px solid rgb(102, 198, 253);
+    box-sizing: border-box;
+}
+.city {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+}
+.dates {
+    margin: 5px auto;
+}
+.pName{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pCreation{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pFirstAlbum{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pMembers{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pDatesLocations{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.map{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: 400px;
+}
+footer{
+  text-align: center;
+  background-color: rgb(102, 198, 253);
+  position: bottom;
+  width: 100%;
+  height: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .gifka{
+    width: 24%;
+  }
+  .upside{
+    text-align: center;
+    background-color: rgb(164, 222, 255);
+  }
+  .upsideText{
+  background-color: rgb(102, 198, 253);
+  font-size: 200%;
+  }
+  .artist{
+    width: 80%;
+  }
+  footer{
+    text-align: center;
+    background-color: rgb(102, 198, 253);
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 16px;
+    font-size: 80%;
+  }
+  .band {
+      margin-top: 13px;
+      display: flex;
+      /* padding: 10px; */
+      justify-content:space-evenly;
+  }
+    .bandinfo {
+      width: 200px;
+      margin: 0.5px 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 80%;
+  }
+  .dateslocations {
+      width: 200px;
+      margin: 0.5px 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 80%;
+  }
+  .infoborder {
+      margin: 20px 0;
+      border-left: 2px solid rgb(102, 198, 253);
+      box-sizing: border-box;
+  }
+  .map{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gifka{
+    width: 20%;
+    background-color: rgb(164, 222, 255);
+  }
+  .upsideText{
+  background-color: rgb(102, 198, 253);
+  font-size: 160%;
+  }
+  .artist{
+    width: 60%;
+  }
+  footer{
+    text-align: center;
+    background-color: rgb(102, 198, 253);
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 11px;
+    font-size: 55%;
+  }
+  .band {
+      margin-top: 9px;
+      display: flex;
+      /* padding: 10px; */
+      justify-content:space-evenly;
+  }
+    .bandinfo {
+      width: 150px;
+      margin: 0.5px 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 65%;
+  }
+  .dateslocations {
+      width: 150px;
+      margin: 0.5px 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 65%;
+  }
+  .infoborder {
+      margin: 15px 0;
+      border-left: 1px solid rgb(102, 198, 253);
+      box-sizing: border-box;
+  }
+  .map{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 300px;
+  }
+}

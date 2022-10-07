@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/ui/style/artist.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <title>Groupie Tracker</title>
+        <link rel="icon" href="https://img.icons8.com/emoji/48/000000/accordion-emoji.png">
+        <meta name="author" content="Taimas">
+        <meta name="description" content="Groupie Tracker site displays information about music bands received from API">
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=38876ece-b140-4e45-9fb3-7f96c1ae95d8&lang=en_US" type="text/javascript"></script>
+        <script src="/ui/scripts/map.js" type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+   
+    <body>
+        <aside><a href="http://localhost:8181/">
+            <div class="upside">
+                <img class="gifka" src="/ui/media/Lazy_Cat_Spinning_cat_transparent_by_Icons8.gif"><div class="upsideText">Groupie Tracker</div>
+            </div>
+        </a></aside>
+            <div class="band">
+                    <div class="bandinfo">
+                        <img class="artist" src="{{.Image}}" alt="">
+                        <p class="pName">Name: </p>{{ .Name}}
+                        <p class="pCreation">Creation Date: </p>{{.CreationDate}}
+                        <p class="pFirstAlbum">First Album: </p>{{.FirstAlbum}}
+                        <p class="pMembers">Members:</p>
+                        {{range .Members}}
+                        <p>{{.}}</p>
+                        {{end}}
+                    </div>
+                    <div class="infoborder"></div>
+                    <div class="dateslocations">
+                        <p class="pDatesLocations">Dates Locations:</p>
+                        {{range $city, $dates:=.DatesLocations}}
+                        <div class="city">{{$city}}</div>
+                            {{range $date:= $dates}}
+                            <div class="dates">{{$date}}</div>
+                            {{end}}
+                        {{end}}
+                    </div>
+            </div>
+            <div id="map" class="map"></div>
+            <p></p>
+            <footer class="footer">
+                ©Copyright by no one, 2022. All rights reserved.
+            </footer>
+    </body>
+   
+</html>

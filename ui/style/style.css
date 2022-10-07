@@ -1,0 +1,451 @@
+html {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(241, 241, 241);
+    max-width: 1655px;
+   font-family: 'Roboto Mono', monospace;
+}
+body {
+    height: auto;
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 100%;
+}
+a{
+  color: black;
+  text-decoration: none;  
+}
+a:visited 
+{
+  color: black;
+  text-decoration: none;
+}
+.gifka{
+    width: 28%;
+}
+.upside{
+      text-align: center;
+      background-color: rgb(164, 222, 255);
+}
+.upsideText{
+    background-color: rgb(102, 198, 253);
+    font-size: 300%;
+}
+.artist{
+  width: 100%;
+}
+.band{
+    width: 240px;
+    height: 280px; 
+    border: 4px solid rgb(102, 198, 253);
+    border-radius: 10px;
+    margin: 15px;
+    color: black;
+    background-color: rgb(164, 222, 255);
+}
+.band:hover .clickText{
+  opacity: 1;
+}
+
+.band:hover .artist {
+  filter: brightness(40%);
+}
+
+.bands{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.name{
+  text-align: center;
+  display: block;
+  font-size: 100%;
+}
+footer{
+  text-align: center;
+  background-color: rgb(102, 198, 253);
+  position: bottom;
+  width: 100%;
+  height: 20px;
+}
+.searchbar{
+  display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.searchbar input {
+  width: 400px;
+  padding: 6px;
+  border-color: rgb(102, 198, 253);
+  font-size: 17px;
+}
+.searchbar button {
+  /* margin-top: 8px; */
+  background: rgb(250, 250, 250);
+  border-color: rgb(102, 198, 253);
+  cursor: pointer;
+}
+.searchbar img {
+  width: 24px;
+}
+
+.collapsible {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(164, 222, 255);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 700px;
+  max-width: 700px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 17px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(102, 198, 253);
+}
+
+.filterContent {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(164, 222, 255);
+  max-width: 700px;
+  margin: auto;
+}
+#filter {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(164, 222, 255);
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 700px;
+  padding: auto;
+  margin: auto;
+}
+
+.filterField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.firsAlbumInp {
+  height: 30px;
+  width: 160px;
+}
+.membersInp {
+  height: 20px;
+  width: 30px;
+}
+input {
+  accent-color: rgb(30, 172, 255);
+}
+input:focus {
+    background-color: rgb(30, 172, 255);
+    color: black;
+    outline: none;
+}
+
+#locationInp {
+  height: 30px;
+  width: 370px;
+}
+#filterBtn {
+border: 1px solid rgb(141, 221, 245);
+color: black;
+  height: 36px;
+  width: 60px;
+}
+#filterBtn:hover {
+  background-color: rgb(102, 198, 253);;
+}
+
+@media screen and (max-width: 800px) {
+  .gifka{
+    width: 24%;
+}
+.upsideText{
+  background-color: rgb(102, 198, 253);
+  font-size: 200%;
+}
+.artist{
+width: 100%;
+}
+.band{
+  width: 168px;
+  height: 200px; 
+  border: 3px solid rgb(102, 198, 253);
+  border-radius: 7px;
+  margin: 10px;
+  color: black;
+  background-color: rgb(164, 222, 255);
+}
+.name{
+  text-align: center;
+  display: block;
+  font-size: 80%;
+  margin-top: 0%;
+}
+
+footer{
+  text-align: center;
+  background-color: rgb(102, 198, 253);
+  position: bottom;
+  width: 100%;
+  height: 16px;
+  font-size: 80%;
+}
+.searchbar{
+  display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.searchbar input {
+  width: 300px;
+  height: 20px;
+  padding: 4px;
+  border-color: rgb(102, 198, 253);
+  font-size: 13px;
+}
+.searchbar button {
+  background: rgb(250, 250, 250);
+  border-color: rgb(102, 198, 253);
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+.searchbar img {
+  width: 19px;
+}
+.collapsible {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(164, 222, 255);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 500px;
+  max-width: 500px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 14px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(102, 198, 253);
+}
+
+.filterContent {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(164, 222, 255);
+  max-width: 500px;
+  margin: auto;
+}
+#filter {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(164, 222, 255);
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 500px;
+  padding: auto;
+  margin: auto;
+}
+
+.filterField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  font-size: 14px;
+}
+
+.creationInp {
+  height: 25px;
+  width: 100px;
+  font-size: 10px;
+}
+.firsAlbumInp {
+  height: 25px;
+  width: 100px;
+}
+.membersInp {
+  height: 15px;
+  width: 20px;
+}
+input {
+  accent-color: rgb(30, 172, 255);
+  font-size: 10px;
+}
+input:focus {
+    background-color: rgb(30, 172, 255);
+    color: black;
+    outline: none;
+}
+
+#locationInp {
+  height: 25px;
+  width: 250px;
+}
+#filterBtn {
+border: 1px solid rgb(141, 221, 245);
+color: black;
+  height: 32px;
+  width: 40px;
+}
+#filterBtn:hover {
+  background-color: rgb(102, 198, 253);;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .gifka{
+    width: 20%;
+}
+.upsideText{
+  background-color: rgb(102, 198, 253);
+  font-size: 160%;
+}
+.artist{
+width: 100%;
+}
+.band{
+  width: 112px;
+  height: 138px; 
+  border: 2px solid rgb(102, 198, 253);
+  border-radius: 4px;
+  margin: 7px;
+  color: black;
+  background-color: rgb(164, 222, 255);
+}
+.name{
+  text-align: center;
+  display: block;
+  font-size: 55%;
+  margin-top: 0%;
+}
+footer{
+  text-align: center;
+  background-color: rgb(102, 198, 253);
+  position: bottom;
+  width: 100%;
+  height: 11px;
+  font-size: 55%;
+}
+.searchbar{
+  display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.searchbar input {
+  width: 200px;
+  height: 15px;
+  padding: 2px;
+  border-color: rgb(102, 198, 253);
+  font-size: 10px;
+}
+.searchbar button {
+  /* margin-top: 8px; */
+  background: rgb(250, 250, 250);
+  border-color: rgb(102, 198, 253);
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.searchbar img {
+  width: 13px;
+}
+
+.collapsible {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(164, 222, 255);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 400px;
+  max-width: 400px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 14px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(102, 198, 253);
+}
+
+.filterContent {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(164, 222, 255);
+  max-width: 400px;
+  margin: auto;
+}
+#filter {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(164, 222, 255);
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 400px;
+  padding: auto;
+  margin: auto;
+}
+
+.filterField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  font-size: 12px;
+}
+
+.creationInp {
+  height: 25px;
+  width: 100px;
+  font-size: 10px;
+}
+.firsAlbumInp {
+  height: 25px;
+  width: 70px;
+  font-size: 7px;
+}
+.membersInp {
+  height: 15px;
+  width: 12px;
+}
+input {
+  accent-color: rgb(30, 172, 255);
+  font-size: 10px;
+}
+input:focus {
+    background-color: rgb(30, 172, 255);
+    color: black;
+    outline: none;
+}
+
+#locationInp {
+  height: 20px;
+  width: 170px;
+}
+#filterBtn {
+border: 1px solid rgb(141, 221, 245);
+color: black;
+  height: 26px;
+  width: 30px;
+}
+#filterBtn:hover {
+  background-color: rgb(102, 198, 253);;
+}
+}

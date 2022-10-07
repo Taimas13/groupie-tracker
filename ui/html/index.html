@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/ui/style/style.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <title>Groupie Tracker</title>
+        <link rel="icon" href="https://img.icons8.com/emoji/48/000000/accordion-emoji.png">
+        <meta name="author" content="Taimas">
+        <meta name="description" content="Groupie Tracker site displays information about music bands received from API">
+        <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <aside><a href="http://localhost:8181/">
+            <div class="upside">
+                <img class="gifka" src="/ui/media/Lazy_Cat_Spinning_cat_transparent_by_Icons8.gif"><div class="upsideText">Groupie Tracker</div>
+            </div>
+        </a></aside>
+        <form action="/search" method="GET">
+        <div class="searchbar">
+            <input list="bandinfolist" id="inputlist" name="searchinput" type="text" placeholder="Type to search ..." required>
+            <button id="searchbutton">
+                <img src="/ui/media/searchbtn.png"/>
+            </button>
+            <datalist id="bandinfolist"> 
+                {{range .SeachDataList}}
+                    <option value="{{.Name}}">{{.Name}} - Artist/Band</option>
+                        {{range .Members}}
+                            <option value="{{.}}">{{.}} - Member</option>
+                        {{end}}
+                    <option value="{{.CreationDate}}">{{.CreationDate}} - Creation Date</option>
+                    <option value="{{.FirstAlbum}}">{{.FirstAlbum}} - First Album</option>
+                    {{range $city, $dates:=.DatesLocations}}
+                    <option value="{{$city}}">{{$city}} - Location</option>
+                    {{range $dates}}
+                    <option value="{{.}}">{{.}} - Date</option>
+                    {{end}}
+                {{end}}
+                {{end}}
+            </datalist>
+        </div>
+        </form>
+
+        <button type="button" class="collapsible">Filter by dates, number of members, locations</button>
+        <div class="filterContent">
+            <form id="filter" action="/filter/" method="GET">
+                <div class="filterField">
+                    <p>Creation Date:</p>
+                    <div>
+                        <input class="creationInp" type="range" name="creationDateFrom"  min={{.FilterRanges.MinCreationDate}} max={{.FilterRanges.MaxCreationDate}}  onchange="document.getElementById('rangeValue1').innerHTML = this.value;" value="{{.FilterRanges.MinCreationDate}}"><span id="rangeValue1">{{.FilterRanges.MinCreationDate}}</span>
+                        <input class="creationInp" type="range" name="creationDateTo" min={{.FilterRanges.MinCreationDate}} max={{.FilterRanges.MaxCreationDate}}  onchange="document.getElementById('rangeValue2').innerHTML = this.value;" value="{{.FilterRanges.MaxCreationDate}}"><span id="rangeValue2">{{.FilterRanges.MaxCreationDate}}</span>
+                    </div>
+                </div>
+                <div class="filterField">
+                    <p>First album date:</p>
+                    <div>
+                        from: <input class="firsAlbumInp" type="date" name="firstAlbumDateFrom" min={{.FilterRanges.MinFirstAlbumDate}} max={{.FilterRanges.MaxFirstAlbumDate}} value="{{.FilterRanges.MinFirstAlbumDate}}">
+                        to: <input class="firsAlbumInp" type="date" name="firstAlbumDateTo" min={{.FilterRanges.MinFirstAlbumDate}} max={{.FilterRanges.MaxFirstAlbumDate}} value="{{.FilterRanges.MaxFirstAlbumDate}}">
+                    </div>
+                </div>
+                <div class="filterField">
+                    <p>Number of members:</p>
+                    <div>
+                        {{range .FilterRanges.MembersNums}}
+                        <label><input class="membersInp" type="checkbox" name="numberOfMembers" id="{{.}}" value="{{.}}">{{.}}</label>
+                        {{end}}
+                    </div>
+                </div>
+                <div class="filterField">
+                    <p>Concert location:</p>
+                    <div>
+                        <input class="locationInp" list="locationList" id="locationInp" name="location" placeholder="London - UK" id="">
+                        <button id="filterBtn">Go</button>
+                    </div>
+                    <datalist id="locationList"> 
+                        {{range .SeachDataList}}
+                            {{range $city, $dates:=.DatesLocations}}
+                            <option value="{{$city}}">{{$city}}</option>
+                        {{end}}
+                        {{end}}
+                    </datalist>
+                </div>
+            </form>
+        </div>
+        <script src="/ui/scripts/collapse.js"></script>
+
+            <div class="bands">
+                {{range .List}}
+                <div class="band">
+                    <a href="/artists/{{.Id}}">
+                        <img class="artist" src="{{.Image}}" alt="">
+                        <p class="name">{{.Name}}</p>
+                    </a>
+                </div>
+                {{end}}
+            </div>
+            <p></p>
+            <footer class="footer">
+                ©Copyright by no one, 2022. All rights reserved.
+            </footer>
+    </body>
+</html>

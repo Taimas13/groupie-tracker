@@ -1,0 +1,10 @@
+{
+    "host": "localhost",
+    "port": "8181",
+    "artistUrl": "https://groupietrackers.herokuapp.com/api/artists",
+    "relationUrl": "https://groupietrackers.herokuapp.com/api/relation",
+    "indexTmplPath":        "ui/html/index.html",
+	"artistTmplPath":       "ui/html/artist.html",
+	"errorTmplPath":        "ui/html/error.html",
+	"searchErrorTmplPath":  "ui/html/searchError.html"
+}
